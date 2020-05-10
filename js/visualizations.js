@@ -138,7 +138,7 @@ $("#formbtn").click(function(){
 			let covidData = response.Countries;
 			google.charts.load('current', {
 				'packages':['geochart'],
-				'mapsApiKey': 'AIzaSyA9_yPvSaoSziuA0W7QLT_FdABZoOfU33U'
+				'mapsApiKey': mapsApiKey
 			});
 			google.charts.setOnLoadCallback(drawRegionsMap);
 			function drawRegionsMap() {
