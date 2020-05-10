@@ -1,0 +1,107 @@
+@import '_variables.scss';
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+.uk-card {
+    background: $color-emph3;
+}
+
+.uk-search {
+    color: white;
+    font-size: 16pt;
+}
+
+.results-box {
+    z-index: 1000;
+    overflow-y:auto;
+    max-height: 400px;
+    cursor: pointer;
+    ul {
+        list-style-type: none;
+        border-bottom: gray;
+        border-top: gray;
+        padding: 0;
+        li {
+            font-size: 16pt;
+            color: $color-emph1;
+            padding: 5px 0 5px 10px;
+            p {
+                color: $color-emph1;
+            }
+        }
+        li:hover {
+            color: white;
+            background-color: $color-emph1;
+            p {
+                color: white;
+            }
+        }
+    }
+}
+
+.headliner {
+    flex-basis: 100%;
+}
+
+.container-radio {
+    text-align: center;
+    label {
+        margin: 0 2.5% 2.5% 0.5%;
+        color: white;
+    }
+}
+
+#graph-title {
+    text-align: center;
+    h2 {
+        color: white;
+    }
+}
+
+#graph-main {
+    width: 90%;
+    margin: 5%;
+}
+
+.covid-table {
+    flex:1;
+    overflow-y:auto;
+    max-height: 400px;
+    .covid-table-body table {
+        color: white;
+
+        th, tbody td {
+            color: white;
+        }
+    }
+}
+
+.covid-map {
+    flex: 2;
+    height: 400px;
+}
+
+#chart-map {
+    height: 340px;
+    width: 100%;
+}

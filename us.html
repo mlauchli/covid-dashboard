@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>United States News | Dropkick the Curve</title>
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="icon" href="assets/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="assets/favicon-24.png" sizes="24x24">
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="assets/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="assets/favicon-256.png" sizes="256x256">
+    <link rel="icon" href="assets/favicon-512.png" sizes="512x512">
+
+</head>
+<body>
+<nav class="uk-navbar-container" uk-navbar>
+	<div class="uk-navbar-left">
+		<ul class="uk-navbar-nav">
+			<li class="uk-parent" id="brand"><a href="index.html"><img src="assets/icon-virus.svg" height="50" width="50">Dropkick the Curve</a></li>
+		</ul>
+	</div>
+	<div class="uk-navbar-right">
+		<ul class="uk-navbar-nav">
+			<li class="uk-parent"><a href="world.html">Global</a></li>
+			<li class="uk-active"><a href="#">United States</a></li>
+			<li class="uk-parent"><a href="other.html">By Region</a></li>
+
+		</ul>
+	</div>
+</nav>
+<main>
+	<div class="uk-background-cover">
+		<h1 class="uk-heading-line uk-margin-left uk-margin-top uk-margin-bottom"><span>United States Numbers</span></h1>
+		<div class="uk-child-width-1-2 uk-center uk-margin" uk-grid>
+			<div>
+				<div class="uk-card uk-margin-left uk-margin-right" id="pie-graph">
+					<div class="uk-card-header">
+						<h4 class="uk-card-title uk-flex-center">Total Cases by State</h4>
+					</div>
+					<div class="uk-card-body">
+						<div id="piechart"></div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-child-width-1-2 uk-text-center uk-margin-right" uk-grid>
+					<div>
+						<div class="uk-card small-card">
+							<div class="uk-card-header">
+								<h4 class="uk-card-title"><img src="assets/icons/total.png" alt="total icon" class="icon">Total Cases</h4>
+							</div>
+							<div class="uk-card-body uk-text-center">
+								<div class="card-data" id="total-cases"></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card small-card">
+							<div class="uk-card-header">
+								<h4 class="uk-card-title"><img src="assets/icons/cases-new.png" alt="new cases icon" class="icon">New Cases</h4>
+							</div>
+							<div class="uk-card-body uk-text-center">
+								<div class="card-data" id="new-cases"></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card small-card">
+							<div class="uk-card-header">
+								<h4 class="uk-card-title"><img src="assets/icons/death.png" alt="total deaths icon" class="icon">Total Deaths</h4>
+							</div>
+							<div class="uk-card-body uk-text-center">
+								<div class="card-data" id="total-deaths"></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card small-card">
+							<div class="uk-card-header">
+								<h4 class="uk-card-title"><img src="assets/icons/death-new.png" alt="new deaths icon" class="icon">New Deaths</h4>
+							</div>
+							<div class="uk-card-body uk-text-center">
+								<div class="card-data" id="new-deaths"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="uk-child-width-1-2 uk-center uk-margin-auto" uk-grid>
+			<div>
+				<div class="uk-child-width-1-2 uk-text-center uk-margin-right" uk-grid>
+					<div>
+						<div class="uk-card">
+							<div class="uk-card-header">
+								<h4 class="uk-card-title"><img src="assets/icons/cases.png" alt="active cases icon" class="icon">Active Cases</h4>
+							</div>
+							<div class="uk-card-body uk-text-center">
+								<div class="card-data" id="active-cases"></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card uk-margin-left uk-margin-right">
+							<div class="uk-card-header">
+								<h4 class="uk-card-title"><img src="assets/icons/tests.png" alt="tests icon" class="icon">Total Number of Tests</h4>
+							</div>
+							<div class="uk-card-body uk-text-center">
+								<div class="card-data" id="total-tests"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="uk-card uk-margin-right" id="bar-graph">
+					<div class="uk-card-header">
+						<h4 class="uk-card-title">Worst Offenders - Deaths per 1 Million</h4>
+					</div>
+					<div class="uk-card-body">
+						<div id="barchart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="uk-background-cover">
+		<div class="uk-flex uk-flex-wrap uk-text-center" id="state-container">
+			</div>
+	</div>
+</main>
+</body>
+<script src="js/jquery-3.5.0.js"></script>
+<script src="js/config.js"></script>
+<script src="js/scriptsus.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit-icons.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</html>

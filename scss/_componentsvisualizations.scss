@@ -1,0 +1,21 @@
+#rona-map-container {
+    display: flex;
+    width: 100%;
+}
+
+#rona-card {
+    flex: 1;
+    flex-basis: 100%;
+    #rona-map {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    }
+
+.selectbtn {
+        background-color: $color-emph1;
+        color: white;
+        vertical-align: middle;
+        width: 100%;
+    }

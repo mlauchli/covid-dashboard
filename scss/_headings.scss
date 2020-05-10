@@ -1,0 +1,33 @@
+@import "_variables.scss";
+
+/*GLOBALS*/
+.title-bar-title {
+    font-family: $font-title;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: $font-body;
+}
+
+h1, h2 {
+    color: $color-emph1;
+}
+
+h3, h4, h5, h6, p {
+    color: $color-emph2;
+}
+
+/*MOBILE*/
+@media screen and (min-width: 0px) and (max-width: $breakpoint-phone-max)  {
+
+}
+
+/*TABLET*/
+@media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max)  {
+
+}
+
+/*DESKTOP*/
+@media screen and (min-width: $breakpoint-desktop-min) {
+
+}

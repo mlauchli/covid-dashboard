@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dropkick the Curve | Home Page</title>
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="icon" href="assets/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="assets/favicon-24.png" sizes="24x24">
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="assets/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="assets/favicon-256.png" sizes="256x256">
+    <link rel="icon" href="assets/favicon-512.png" sizes="512x512">
+
+</head>
+<body>
+<nav class="uk-navbar-container" uk-navbar>
+	<div class="uk-navbar-left">
+		<ul class="uk-navbar-nav">
+			<li class="uk-active" id="brand"><a href="index.html"><img src="assets/icon-virus.svg" height="50" width="50">Dropkick the Curve</a></li>
+		</ul>
+	</div>
+	<div class="uk-navbar-right">
+		<ul class="uk-navbar-nav">
+			<li class="uk-parent"><a href="world.html">Global</a></li>
+			<li class="uk-parent"><a href="us.html">United States</a></li>
+			<li class="uk-parent"><a href="other.html">By Region</a></li>
+
+		</ul>
+	</div>
+</nav>
+<main>
+	<div class="uk-background-cover">
+		<!--Search Bar-->
+		<div class="uk-flex uk-flex-center">
+			<div class="uk-container uk-margin-remove uk-width-1-1">
+				<form class="uk-search uk-search-default uk-width-1-2 uk-align-center uk-margin-remove-bottom" autocomplete="off">
+					<span class="uk-search-icon-flip" uk-search-icon></span>
+					<input class="uk-search-input" type="search" name="countrysearch" id="countrysearch" placeholder="Enter a country">
+				</form>
+				<div class="uk-width-1-2 uk-align-center uk-margin-remove-top results-box uk-hidden" id="results-container" style="background-color: white;">
+					<ul id="result-list">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container-radio uk-flex-center">
+			<form>
+				<input class="uk-radio" type="radio" name="case-type" value="confirmed" onClick="saveCaseType(this.value)" checked><label>Confirmed</label>
+				<input class="uk-radio" type="radio" name="case-type" value="deaths" onClick="saveCaseType(this.value)"><label>Deaths</label>
+				<input class="uk-radio" type="radio" name="case-type" value="recovered" onClick="saveCaseType(this.value)"><label>Recovered</label>
+			</form>
+		</div>
+		<div class="uk-flex uk-flex-center">
+			<div class="uk-card uk-margin-left uk-margin-right headliner">
+				<div class="uk-card-body uk-flex-center">
+					<div id="graph-title"></div>
+					<div id="graph-main"></div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-flex uk-flex-center">
+			<div class="uk-card uk-margin-left uk-margin-right covid-table">
+				<div class="uk-card-header">
+					<h4 class="uk-card-title">Last 30 Days</h4>
+				</div>
+				<div class="uk-card-body">
+					<table class='uk-table uk-table-divider'>
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Cases</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="uk-card uk-margin-left uk-margin-right covid-map">
+				<div class="uk-card-body">
+					<div id="chart-map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</main>
+<div class="modal uk-spinner"></div>
+<script src="js/jquery-3.5.0.js"></script>
+<script src="js/config.js"></script>
+<script src="js/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit-icons.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</body>
+</html>

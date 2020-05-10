@@ -1,0 +1,18 @@
+.uk-navbar-nav>li.uk-active>a {
+    color: $color-emph1;
+    border-bottom: $color-emph1 solid 3px;
+    img {
+        margin-right: 15px;
+    }
+}
+#brand a {
+    font-size: 18pt;
+    img {
+        margin-right: 15px;
+    }
+}
+
+nav {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}

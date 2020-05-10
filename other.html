@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>By Region | Dropkick the Curve</title>
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="icon" href="assets/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="assets/favicon-24.png" sizes="24x24">
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="assets/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="assets/favicon-256.png" sizes="256x256">
+    <link rel="icon" href="assets/favicon-512.png" sizes="512x512">
+
+</head>
+<body>
+<nav class="uk-navbar-container" uk-navbar>
+	<div class="uk-navbar-left">
+		<ul class="uk-navbar-nav">
+			<li class="uk-parent" id="brand"><a href="index.html"><img src="assets/icon-virus.svg" height="50" width="50">Dropkick the Curve</a></li>
+		</ul>
+	</div>
+	<div class="uk-navbar-right">
+		<ul class="uk-navbar-nav">
+			<li class="uk-parent"><a href="world.html">Global</a></li>
+			<li class="uk-parent"><a href="us.html">United States</a></li>
+			<li class="uk-active"><a href="other.html">By Region</a></li>
+
+		</ul>
+	</div>
+</nav>
+<main>
+	<div class="uk-background-cover">
+		<h1 class="uk-heading-line uk-margin-left uk-margin-top uk-margin-bottom"><span>Coronavirus By Region</span></h1>
+
+		<div class="uk-flex uk-flex-center">
+			<div class="uk-card uk-margin-left uk-margin-right"  id="rona-card">
+					<div class="uk-card-body uk-flex">
+						<div class="uk-card" id="rona-map" style="flex-basis: 67%"></div>
+						<div class="uk-card uk-margin-auto-left uk-align-left uk-padding-large" style="flex-basis: 33%;" uk-grid>
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2@s" style="margin-right: 0; display: inline-block">
+										<label class="uk-form-label" style="color: white;" for="minRange">Minimum cases</label>
+										<input class="uk-input" type="number" name="minRange" id="minRange" placeholder="1">
+									</div>
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2@s" style="margin-right: 0; display: inline-block">
+										<label class="uk-form-label" style="color: white;" for="maxRange">Maximum cases</label>
+										<input class="uk-input" type="number" name="maxRange" id="maxRange" placeholder="1500000">
+									</div>
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2">
+										<div uk-form-custom="target: > * > span:first-child">
+											<select id="continents">
+												<option value="">Continent</option>
+												<option value="002">Africa</option>
+												<option value="150">Europe</option>
+												<option value="019">Americas</option>
+												<option value="142">Asia</option>
+												<option value="009">Oceania</option>
+											</select>
+											<button class="uk-button selectbtn uk-width-1-1" type="button" tabindex="-1">
+												<span></span>
+												<span uk-icon="icon: chevron-down"></span>
+											</button>
+										</div>
+									</div>
+
+									<!--African Options-->
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2@s uk-hidden" id="african-select">
+										<div uk-form-custom="target: > * > span:first-child">
+											<select id="af-region">
+												<option value="">Region</option>
+												<option value="015">Northern</option>
+												<option value="011">Western</option>
+												<option value="017">Middle</option>
+												<option value="014">Eastern</option>
+												<option value="018">Southern</option>
+											</select>
+											<button class="uk-button selectbtn uk-width-1-2@s" type="button" tabindex="-1">
+												<span></span>
+												<span uk-icon="icon: chevron-down"></span>
+											</button>
+										</div>
+									</div>
+
+									<!--European Options-->
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2@s uk-hidden" id="european-select">
+										<div uk-form-custom="target: > * > span:first-child">
+											<select id="eu-region">
+												<option value="">Region</option>
+												<option value="154">Northern</option>
+												<option value="155">Western</option>
+												<option value="151">Eastern</option>
+												<option value="039">Southern</option>
+											</select>
+											<button class="uk-button selectbtn uk-width-1-2@s" type="button" tabindex="-1">
+												<span></span>
+												<span uk-icon="icon: chevron-down"></span>
+											</button>
+										</div>
+									</div>
+
+									<!--American Options-->
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2@s uk-hidden" id="american-select">
+										<div uk-form-custom="target: > * > span:first-child">
+											<select id="am-region">
+												<option value="">Region</option>
+												<option value="021">Northern</option>
+												<option value="029">Caribbean</option>
+												<option value="013">Central</option>
+												<option value="005">South</option>
+											</select>
+											<button class="uk-button selectbtn uk-width-1-2@s" type="button" tabindex="-1">
+												<span></span>
+												<span uk-icon="icon: chevron-down"></span>
+											</button>
+										</div>
+									</div>
+
+									<!--Asian Options-->
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2@s uk-hidden" id="asian-select">
+										<div uk-form-custom="target: > * > span:first-child">
+											<select id="az-region">
+												<option value="">Region</option>
+												<option value="143">Central</option>
+												<option value="030">Eastern</option>
+												<option value="034">Southern</option>
+												<option value="035">South-Eastern</option>
+												<option value="145">Western</option>
+											</select>
+											<button class="uk-button selectbtn uk-width-1-2@s" type="button" tabindex="-1">
+												<span></span>
+												<span uk-icon="icon: chevron-down"></span>
+											</button>
+										</div>
+									</div>
+
+									<!--Oceanian Options-->
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-2@s uk-hidden" id="oceanian-select">
+										<div uk-form-custom="target: > * > span:first-child">
+											<select id="oc-region">
+												<option value="">Region</option>
+												<option value="053">AU & NZ</option>
+												<option value="054">Melanesia</option>
+												<option value="057">Micronesia</option>
+												<option value="061">Polynesia</option>
+											</select>
+											<button class="uk-button selectbtn uk-width-1-2@s" type="button" tabindex="-1">
+												<span></span>
+												<span uk-icon="icon: chevron-down"></span>
+											</button>
+										</div>
+									</div>
+
+									<div class="uk-margin-top uk-margin-bottom uk-width-1-1">
+										<button class="uk-button uk-width-1-1" id="formbtn">Update</button>
+									</div>
+								</div>		
+							
+						</div>
+					</div>								
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</main>
+</body>
+<script src="js/jquery-3.5.0.js"></script>
+<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+<script src="js/config.js"></script>
+<script src="js/visualizations.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.0/dist/js/uikit-icons.min.js"></script>
+</html>

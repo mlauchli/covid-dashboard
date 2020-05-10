@@ -1,0 +1,44 @@
+@import "_variables.scss";
+
+#card-numbers, #card-num-chart, #card-num-news {
+    flex: 1;
+}
+
+#card-numbers {
+    flex-basis: 100%;
+    overflow-y:auto;
+    max-height: 400px;
+}
+
+#card-num-chart {
+    @media only screen AND (min-width: $breakpoint-desktop-min) {
+        flex-basis: 50%; 
+    }
+    @media only screen AND (max-width: $breakpoint-tablet-max) {
+        flex-basis: 100%;
+    }
+}
+
+#card-num-news {
+    overflow-y:auto;
+    max-height: 400px;
+    @media only screen and (min-width: $breakpoint-desktop-min) {
+        flex-basis: 50%; 
+    }
+    @media only screen and (max-width: $breakpoint-tablet-max) {
+        flex-basis: 100%;
+    }
+}
+
+.uk-table th, tbody td {
+    color: white;
+    text-align: center;
+}
+
+.change-pos {
+    color: $color-emph5;
+}
+
+.change-neg {
+    color: $color-emph4; 
+}
